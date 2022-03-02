@@ -1,9 +1,10 @@
 cff-version: 1.2.0
-message: "Matthew P Hamilton (2022). aqol6dmap_fakes: Generate fake input data for an AQoL-6D mapping study. Zenodo. Version 0.0.9.0"
+message: "Matthew P Hamilton (2022). aqol6dmap_fakes: Generate fake input data for an AQoL-6D mapping study. Zenodo. https://doi.org/10.5281/zenodo.6321820. Version 0.0.9.0"
 authors:
   - family-names: "Hamilton"
     given-names: "Matthew P"
 title: "aqol6dmap_fakes: Generate fake input data for an AQoL-6D mapping study"
 version: 0.0.9.0
 date-released: 2022-03-02
+doi: 10.5281/zenodo.6321820
 url: "https://github.com/ready4-dev/aqol6dmap_fakes"
