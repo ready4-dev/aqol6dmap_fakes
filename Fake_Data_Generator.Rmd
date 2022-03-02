@@ -15,7 +15,7 @@ The output of this program is very similar but not identical to a fake dataset c
 # Install required R packages
 If you do not have the following packages already installed, uncomment and run the following lines.
 
-```{r echo = F}
+```{r}
 # install.packages("faux")
 # devtools::install_github("ready4-dev/ready4) 
 # devtools::install_github("ready4-dev/youthvars) 
@@ -280,7 +280,8 @@ fup_tb <- fup_tb %>%
                   purrr::map_dbl(~min(.x,100) %>% max(0)))
 ```
 
-## Add fake outcome variables to fake descriptive variables.
+## Combine datasets
+We now add the fake outcome variables dataset to the fake descriptive variables dataset.
 
 ```{r}
 composite_tb <- dplyr::bind_rows(bl_tb, fup_tb) %>%

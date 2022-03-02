@@ -362,6 +362,13 @@ pre code {
 <div id="install-required-r-packages" class="section level1">
 <h1>Install required R packages</h1>
 <p>If you do not have the following packages already installed, uncomment and run the following lines.</p>
+<pre class="r"><code># install.packages(&quot;faux&quot;)
+# devtools::install_github(&quot;ready4-dev/ready4) 
+# devtools::install_github(&quot;ready4-dev/youthvars) 
+# devtools::install_github(&quot;ready4-dev/scorz) 
+# devtools::install_github(&quot;ready4-dev/specific&quot;) 
+# devtools::install_github(&quot;ready4-dev/TTU&quot;)
+# devtools::install_github(&quot;ready4-dev/youthu&quot;)</code></pre>
 <p>Load the ready4 framework package.</p>
 <pre class="r"><code>library(ready4)</code></pre>
 </div>
@@ -607,8 +614,9 @@ fup_tb &lt;- fup_tb %&gt;%
                                           empirical = T) %&gt;% 
                   purrr::map_dbl(~min(.x,100) %&gt;% max(0)))</code></pre>
 </div>
-<div id="add-fake-outcome-variables-to-fake-descriptive-variables." class="section level2">
-<h2>Add fake outcome variables to fake descriptive variables.</h2>
+<div id="combine-datasets" class="section level2">
+<h2>Combine datasets</h2>
+<p>We now add the fake outcome variables dataset to the fake descriptive variables dataset.</p>
 <pre class="r"><code>composite_tb &lt;- dplyr::bind_rows(bl_tb, fup_tb) %&gt;%
   dplyr::mutate(d_age = floor(d_age)) %&gt;%
   dplyr::mutate(d_gender = d_gender %&gt;% as.character() %&gt;%
